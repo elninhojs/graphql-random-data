@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start:mock": "npm run fwmock & NODE_ENV=test PORT=4001 node src/main.js",
-    "start:dev": "NODE_ENV=dev PORT=4001 node src/main.js",
+    "start": "NODE_ENV=dev PORT=4001 node src/main.js",
     "test": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:coverage": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
     "release": "node ./scripts/release.js",

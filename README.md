@@ -12,7 +12,7 @@ npm run start:mock
 
 Starting the dev instance
 ```sh
-npm run start:dev
+npm start
 ```
 
 Starting prod instance 
