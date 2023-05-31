@@ -21,7 +21,7 @@ COPY . .
 EXPOSE ${PORT}
 
 # Run development server
-ENTRYPOINT [ "npm", "run", "start:dev" ]
+ENTRYPOINT [ "npm", "run", "start" ]
 
 # Production version
 FROM node AS production
