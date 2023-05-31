@@ -1,0 +1,30 @@
+{
+  "name": "graphql-random-data",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start:mock": "npm run fwmock & NODE_ENV=test PORT=4001 node src/main.js",
+    "start:dev": "NODE_ENV=dev PORT=4001 node src/main.js",
+    "test": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "release": "node ./scripts/release.js",
+    "fwmock": "FW_DIR=./mock-data/ FW_PORT=4321 node node_modules/flat-white-mock",
+    "fwmock:stop": "pkill -f \"flat-white-api\" && exit 0",
+    "start:prod": "NODE_ENV=production PORT=8090 node src/main.js",
+    "lint:fix": "eslint --fix src/",
+    "lint": "eslint src/"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-plugin-import": "^2.26.0",
+    "flat-white-mock": "^0.2.3",
+    "jest": "^29.3.1",
+    "supertest": "^6.3.1"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.1.1",
+    "graphql": "^16.6.0",
+    "node-fetch": "^3.3.1"
+  }
+}
